@@ -12,12 +12,8 @@ export default function App ()  {
   location={user.location}
   avatar={user.avatar}
   stats={user.stats}
-  statsfolowers = {user.stats.followers}
-  statsviews = {user.stats.views}
-  statslikes = {user.stats.likes}
 />
     </div>
   );
 };
-
 

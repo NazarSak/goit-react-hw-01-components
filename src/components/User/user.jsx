@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 
-const Profile = ({location,avatar,username,tag,statsfolowers,statsfolowers,statslikes}) => {
+export default function Profile ({location,avatar,username,tag,stats})  {
   return (
-<div >
-<div >
+<div>
+<div>
 <img
   src={avatar}
   alt="User avatar"
@@ -15,30 +15,28 @@ const Profile = ({location,avatar,username,tag,statsfolowers,statsfolowers,stats
 
 <ul >
 <li>
-  <span >Followers</span>
-  <span >{statsfolowers}</span>
+  <span>Followers</span>
+  <span>{stats.followers}</span>
 </li>
 <li>
-  <span >Views</span>
-  <span >{statsfolowers}</span>
+  <span>Views</span>
+  <span>{stats.views}</span>
 </li>
 <li>
   <span >Likes</span>
-  <span >{statslikes}</span>
+  <span >{stats.likes}</span>
 </li>
 </ul>
 </div>
-)
-}
+  );
+};
+ 
 
-Profile.PropTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location : PropTypes.string,
-  avatar : PropTypes.string,
-  statsfolowers: PropTypes.number,
-  statsviews: PropTypes.number,
-  statslikes: PropTypes.number
-}
+// Profile.PropTypes = {
+//   username: PropTypes.string,
+//   tag: PropTypes.string,
+//   location : PropTypes.string,
+//   avatar : PropTypes.string,
+//   stats: PropTypes.objectOf(PropTypes.number)
+// }
 
-export default Profile
