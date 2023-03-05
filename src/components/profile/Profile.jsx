@@ -1,6 +1,6 @@
 // import PropTypes from "prop-types"
 
-export default function Profile ({location,avatar,username,tag,stats})  {
+ function Profile ({location,avatar,username,tag,stats})  {
   return (
 <div>
 <div>
@@ -31,12 +31,19 @@ export default function Profile ({location,avatar,username,tag,stats})  {
   );
 };
  
-
 // Profile.PropTypes = {
 //   username: PropTypes.string,
 //   tag: PropTypes.string,
 //   location : PropTypes.string,
 //   avatar : PropTypes.string,
-//   stats: PropTypes.objectOf(PropTypes.number)
+//   stats: PropTypes.shape({
+//   followers: PropTypes.number.isRequired,
+//   views: PropTypes.number.isRequired,
+//   likes: PropTypes.number.isRequired,
+//     })
 // }
+
+
+export default Profile
+
 
