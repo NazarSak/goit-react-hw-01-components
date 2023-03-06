@@ -1,18 +1,27 @@
+import propTypes from 'prop-types';
 import { FriendsRender } from './FriendsRender';
+import { List, Friend } from './FriendList.styled';
 
-export const  FriendList = ({ friends }) => {
- return <ul>
-    {friends.map(friend => (
-      <li key={friend.id}>
-        <FriendsRender
-          avatar={friend.avatar}
-          name={friend.name}
-          isOnline={friend.isOnline}
-        />
-      </li>
-    ))}
-  </ul>;
-}
+export const FriendList = ({ friends, isOnline }) => {
+  return (
+    <List>
+      {friends.map(friend => (
+        <Friend key={friend.id} isOnline={isOnline}>
+          <FriendsRender
+            avatar={friend.avatar}
+            name={friend.name}
+            isOnline={friend.isOnline}
+          />
+        </Friend>
+      ))}
+    </List>
+  );
+};
+
+FriendList.propTypes = {
+  avatar: propTypes.string,
+  name: propTypes.string,
+};
 
 // export const FriendList = ({friends}) => {
 // return <ul >

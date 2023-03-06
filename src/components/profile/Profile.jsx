@@ -1,8 +1,14 @@
-import propTypes from "prop-types"
-import { Container,ListAbout,Tag,Img,Name,SpanLetter,SpanNumber,LiAbout } from "./Profile.styled";
-
-
-
+import propTypes from 'prop-types';
+import {
+  Container,
+  ListAbout,
+  Tag,
+  Img,
+  Name,
+  SpanLetter,
+  SpanNumber,
+  LiAbout,
+} from './Profile.styled';
 
 function Profile({ location, avatar, username, tag, stats }) {
   return (
@@ -35,13 +41,13 @@ function Profile({ location, avatar, username, tag, stats }) {
 Profile.propTypes = {
   username: propTypes.string,
   tag: propTypes.string,
-  location : propTypes.string,
-  avatar : propTypes.string,
+  location: propTypes.string,
+  avatar: propTypes.string,
   stats: propTypes.shape({
-  followers: propTypes.number.isRequired,
-  views: propTypes.number.isRequired,
-  likes: propTypes.number.isRequired,
-    })
-}
+    followers: propTypes.number.isRequired,
+    views: propTypes.number.isRequired,
+    likes: propTypes.number.isRequired,
+  }),
+};
 
 export default Profile;

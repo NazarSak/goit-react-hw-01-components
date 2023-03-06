@@ -1,17 +1,39 @@
+import {
+  Section,
+  Title,
+  ListColors,
+  Color,
+  Format,
+  Percentage,
+} from './Statistics.styled';
+
+import propTypes from 'prop-types';
+
 export const Statistics = ({ stats, title }) => {
   return (
-    <section>
-      <h2>{title}</h2>
-      <ul>
+    <Section>
+      <Title>{title}</Title>
+      <ListColors>
         {stats.map(stat => (
-          <li key={stat.id}>
-            <span>{stat.label}</span>
-            <span>{stat.percentage}</span>
-          </li>
+          <Color key={stat.id}>
+            <Format>{stat.label}</Format>
+            <Percentage>{stat.percentage}%</Percentage>
+          </Color>
         ))}
-      </ul>
-    </section>
+      </ListColors>
+    </Section>
   );
+};
+
+Statistics.propTypes = {
+  title: propTypes.string,
+  stats: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      label: propTypes.string.isRequired,
+      percentage: propTypes.number.isRequired,
+    })
+  ),
 };
 
 // export default function Statistics ({stats}) {

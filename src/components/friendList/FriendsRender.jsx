@@ -1,12 +1,11 @@
-// import clsx from "clsx";
+import { Name, Img } from './FriendList.styled';
 
 export const FriendsRender = ({ avatar, name, isOnline }) => {
   return (
-    <div>
-      <span >{isOnline}</span>
-      <img src={avatar} alt="User avatar" width="60" />
-      <p >{name}</p>
-    </div>
+    <>
+      <span>{isOnline}</span>
+      <Img src={avatar} alt="User avatar" width="60" />
+      <Name>{name}</Name>
+    </>
   );
 };
- 
