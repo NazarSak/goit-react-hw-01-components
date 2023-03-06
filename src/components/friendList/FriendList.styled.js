@@ -26,3 +26,4 @@ export const Name = styled.span`
 export const Img = styled.img`
   margin-right: 1px;
 `;
+ 
