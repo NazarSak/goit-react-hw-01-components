@@ -1,49 +1,47 @@
-// import PropTypes from "prop-types"
+import propTypes from "prop-types"
+import { Container,ListAbout,Tag,Img,Name,SpanLetter,SpanNumber,LiAbout } from "./Profile.styled";
 
- function Profile ({location,avatar,username,tag,stats})  {
+
+
+
+function Profile({ location, avatar, username, tag, stats }) {
   return (
-<div>
-<div>
-<img
-  src={avatar}
-  alt="User avatar"
-/>
-<p>{username}</p>
-<p>{tag}</p>
-<p>{location}</p>
-</div>
+    <Container>
+      <div>
+        <Img src={avatar} alt="User avatar" width="80px" />
+        <Name>{username}</Name>
+        <Tag>{tag}</Tag>
+        <Tag>{location}</Tag>
+      </div>
 
-<ul >
-<li>
-  <span>Followers</span>
-  <span>{stats.followers}</span>
-</li>
-<li>
-  <span>Views</span>
-  <span>{stats.views}</span>
-</li>
-<li>
-  <span >Likes</span>
-  <span >{stats.likes}</span>
-</li>
-</ul>
-</div>
+      <ListAbout>
+        <LiAbout>
+          <SpanLetter>Followers</SpanLetter>
+          <SpanNumber>{stats.followers}</SpanNumber>
+        </LiAbout>
+        <LiAbout>
+          <SpanLetter>Views</SpanLetter>
+          <SpanNumber>{stats.views}</SpanNumber>
+        </LiAbout>
+        <LiAbout>
+          <SpanLetter>Likes</SpanLetter>
+          <SpanNumber>{stats.likes}</SpanNumber>
+        </LiAbout>
+      </ListAbout>
+    </Container>
   );
-};
- 
-// Profile.PropTypes = {
-//   username: PropTypes.string,
-//   tag: PropTypes.string,
-//   location : PropTypes.string,
-//   avatar : PropTypes.string,
-//   stats: PropTypes.shape({
-//   followers: PropTypes.number.isRequired,
-//   views: PropTypes.number.isRequired,
-//   likes: PropTypes.number.isRequired,
-//     })
-// }
+}
 
+Profile.propTypes = {
+  username: propTypes.string,
+  tag: propTypes.string,
+  location : propTypes.string,
+  avatar : propTypes.string,
+  stats: propTypes.shape({
+  followers: propTypes.number.isRequired,
+  views: propTypes.number.isRequired,
+  likes: propTypes.number.isRequired,
+    })
+}
 
-export default Profile
-
-
+export default Profile;
