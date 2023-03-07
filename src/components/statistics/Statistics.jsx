@@ -1,6 +1,6 @@
 import {
   Section,
-  Title,
+  Title  ,
   ListColors,
   Color,
   Format,
@@ -8,13 +8,13 @@ import {
   WrapperStat,
 } from './Statistics.styled';
 
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ stats, title }) => {
   return (
     <Section>
       <WrapperStat>
-        <Title>{title}</Title>
+      {title &&(<Title>{title}</Title>)}
         <ListColors>
           {stats.map(stat => (
             <Color key={stat.id}>
@@ -29,12 +29,12 @@ export const Statistics = ({ stats, title }) => {
 };
 
 Statistics.propTypes = {
-  title: propTypes.string,
-  stats: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.string.isRequired,
-      label: propTypes.string.isRequired,
-      percentage: propTypes.number.isRequired,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };

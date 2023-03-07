@@ -1,5 +1,5 @@
 import TransactionRender from './TransactionRender';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import {
   Table,
@@ -8,12 +8,6 @@ import {
   Payments,
   Details,
 } from './transactionHistory.styled';
-
-TransactionHistory.propTypes = {
-  type: propTypes.string,
-  amount: propTypes.number,
-  currency: propTypes.string,
-};
 
 export default function TransactionHistory({ items }) {
   return (
@@ -39,3 +33,14 @@ export default function TransactionHistory({ items }) {
     </Table>
   );
 }
+
+TransactionHistory.propTypes = {
+  type: PropTypes.string,
+  amount: PropTypes.number,
+  currency: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};

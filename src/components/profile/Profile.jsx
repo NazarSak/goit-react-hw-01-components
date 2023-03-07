@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   Container,
   ListAbout,
@@ -39,14 +39,14 @@ function Profile({ location, avatar, username, tag, stats }) {
 }
 
 Profile.propTypes = {
-  username: propTypes.string,
-  tag: propTypes.string,
-  location: propTypes.string,
-  avatar: propTypes.string,
-  stats: propTypes.shape({
-    followers: propTypes.number.isRequired,
-    views: propTypes.number.isRequired,
-    likes: propTypes.number.isRequired,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
   }),
 };
 

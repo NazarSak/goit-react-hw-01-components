@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { Methods } from './transactionHistory.styled';
 
@@ -13,9 +13,9 @@ const TransactionRender = ({ type, amount, currency }) => {
 };
 
 TransactionRender.propTypes = {
-  type: propTypes.string,
-  amount: propTypes.string,
-  currency: propTypes.string,
+  type: PropTypes.string,
+  amount: PropTypes.string,
+  currency: PropTypes.string,
 };
 
 export default TransactionRender;

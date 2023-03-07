@@ -1,6 +1,8 @@
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 import { Name, Img } from './FriendList.styled';
 import css from "./FriendList.module.css"
+
 
 export const FriendsRender = ({ avatar, name, isOnline }) => {
   return (
@@ -11,3 +13,9 @@ export const FriendsRender = ({ avatar, name, isOnline }) => {
     </>
   );
 };
+
+FriendsRender.propTypes = {
+  avatar : PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool
+}
