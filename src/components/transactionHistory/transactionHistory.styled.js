@@ -36,5 +36,6 @@ export const Methods = styled.td`
   width: 170px;
   color: grey;
   padding-bottom: 15px;
+  padding-top: 15px;
   background-color: orange;
 `;

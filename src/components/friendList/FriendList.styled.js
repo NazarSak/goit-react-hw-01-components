@@ -13,9 +13,10 @@ export const List = styled.ul`
 
 export const Friend = styled.li`
   display: flex;
-  justify-content: center;
+padding-left: 15px;
   align-items: center;
-  /* background-color: ${({ isOnline }) => (isOnline ? 'green' : 'red')}; */
+  background-color: lightgray;
+  width: 250px;
 `;
 
 export const Name = styled.span`

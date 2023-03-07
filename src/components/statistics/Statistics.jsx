@@ -5,6 +5,7 @@ import {
   Color,
   Format,
   Percentage,
+  WrapperStat,
 } from './Statistics.styled';
 
 import propTypes from 'prop-types';
@@ -12,15 +13,17 @@ import propTypes from 'prop-types';
 export const Statistics = ({ stats, title }) => {
   return (
     <Section>
-      <Title>{title}</Title>
-      <ListColors>
-        {stats.map(stat => (
-          <Color key={stat.id}>
-            <Format>{stat.label}</Format>
-            <Percentage>{stat.percentage}%</Percentage>
-          </Color>
-        ))}
-      </ListColors>
+      <WrapperStat>
+        <Title>{title}</Title>
+        <ListColors>
+          {stats.map(stat => (
+            <Color key={stat.id}>
+              <Format>{stat.label}</Format>
+              <Percentage>{stat.percentage}%</Percentage>
+            </Color>
+          ))}
+        </ListColors>
+      </WrapperStat>
     </Section>
   );
 };

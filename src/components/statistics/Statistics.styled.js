@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Section = styled.ul`
+export const Section = styled.section`
   /* background-color: aqua; */
   display: flex;
   margin-bottom: 100px;
@@ -17,7 +17,7 @@ export const Title = styled.h2`
 export const ListColors = styled.ul`
   list-style: none;
   display: flex;
-  margin-left: -35px;
+  margin-left: -40px;
 `;
 
 export const Color = styled.li`
@@ -40,3 +40,11 @@ export const Percentage = styled.span`
   margin-top: 5px;
   color: white;
 `;
+
+export const WrapperStat = styled.div`
+background-color: aqua;
+display: flex;   
+flex-direction: column;    
+align-items: center;
+width:300px;
+`
